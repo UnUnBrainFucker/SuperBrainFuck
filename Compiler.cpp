@@ -15,3 +15,8 @@ vector<char> Compiler::tokenize(const string& input) const {
     }
     return tokens;
 }
+
+void Compiler::tokenizer(const string& input) {
+    _tokens = tokenize(input);
+    parser(_tokens);
+}
